@@ -1,9 +1,12 @@
 ﻿namespace AiAiCaptain.FreePlayer.Interfaces
 {
-    interface ISubmarineSecond
+    public interface ISubmarineWithContext
     {
         void MoveForward();
         void MoveLeft();
         void MoveRight();
+        bool CanMoveForward();
+        bool CanMoveLeft();
+        bool CanMoveRight();
     }
 }

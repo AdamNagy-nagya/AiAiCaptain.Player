@@ -7,5 +7,7 @@ namespace AiAiCaptain.FreePlayer.Interfaces
     public interface IFreePlayer
     {
         void OnGameStart(ISubmarine submarine);
+
+        void OnGameStart(ISubmarineWithContext submarine);
     }
 }

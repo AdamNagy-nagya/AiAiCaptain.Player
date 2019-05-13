@@ -1,5 +1,4 @@
 ﻿using AiAiCaptain.FreePlayer.Interfaces;
-using AiAiCaptain.FreePlayer.Submarines;
 using System;
 
 namespace AiAiCaptain.FreePlayer
@@ -9,7 +8,18 @@ namespace AiAiCaptain.FreePlayer
         public void OnGameStart(ISubmarine submarine)
         {
             for (int i = 0; i < 10; i++) {
-                submarine.MoveLeft();
+                submarine.MoveRight();
+            }
+        }
+
+        public void OnGameStart(ISubmarineWithContext submarine)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                if (submarine.CanMoveForward())
+                {
+                    submarine.MoveForward();
+                }
             }
         }
     }
